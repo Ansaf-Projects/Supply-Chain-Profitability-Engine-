@@ -18,8 +18,9 @@ CREATE TABLE logistics_fact_table (
     Delivery_SLA_Variance INT
 );
 
--- Note: SHOW VARIABLES doesn't do anything for the import itself, 
--- you just use it to check the path. I removed it from the execution block.
+
+
+
 
 LOAD DATA LOCAL INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/supply_chain_data_mart.csv.csv'
 INTO TABLE logistics_fact_table
@@ -28,7 +29,8 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-select*from logistics_fact_table limit 10;
+
+
 
 
 WITH CategoryLogistics AS (
